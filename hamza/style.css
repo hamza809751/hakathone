@@ -1,0 +1,182 @@
+/* Basic Reset and Variables */
+:root {
+    --primary-color: #B88E2F; /* Gold/Yellow for Buy Now button */
+    --secondary-bg: #FFF3E3; /* Light beige background for content box */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --font-heading: 'Poppins', sans-serif; /* Use a modern font */
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    height: 70px;
+   
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.nav-icons i {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 80vh; /* Adjust as needed */
+    padding: 0 5%;
+    /* This section would typically have a large background image */
+    background: url('hero-bg-floor.jpg') no-repeat center bottom; /* Placeholder background */
+    background-size: cover;
+}
+
+.hero-image-container {
+    /* Container for the chair/plant image to position it */
+    position: absolute;
+    top: 0;
+    left: 6%;
+    width: 70%; /* Occupy the left space */
+    height: 600%;
+    z-index: 1; 
+}
+
+.hero-image img {
+    /* Style the actual chair image if it's placed as a separate element */
+
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 110px;
+}
+
+.hero-content-box {
+    position: absolute;
+    right: 5%;
+    width: 450px;
+    padding: 40px;
+    background-color: var(--secondary-bg);
+    z-index: 10; /* Ensure it's above the image */
+    /* Add a subtle shadow if desired */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+.new-arrival {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.hero-content-box h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.hero-content-box h1 strong {
+    color: var(--primary-color);
+}
+
+.description {
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.buy-now-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-now-btn:hover {
+    background-color: #a07828;
+}
+
+/* --- Browse The Range --- */
+.browse-range {
+    text-align: center;
+    padding: 50px 5%;
+}
+
+.range-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.range-header p {
+    color: var(--text-light);
+    margin-bottom: 50px;
+}
+
+.range-categories {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.category-item {
+    text-align: center;
+    flex: 1;
+    max-width: 380px;
+}
+
+.category-img {
+    width: 100%;
+    height: 400px; /* Set a fixed height for visual consistency */
+    object-fit: cover; /* Ensures images cover the area without stretching */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.category-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* The Bedroom item looks slightly cropped in the image */
+/* To visually mimic the cropping: */
+
+.range-categories .category-item:last-child .category-img {
+    /* This is an advanced styling to mimic the crop effect seen in the screenshot, 
+       often achieved by background position or overflow in a real scenario. 
+       For this code, we assume the image is just a regular square image. 
+       We'll skip the actual crop for simplicity. */
+}
